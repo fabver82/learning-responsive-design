@@ -7,11 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
          /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 410px) {
         body{
             background-color: red;
         }
+        div#small{
+            display:block;
+        }
+        div#medium,div#large{
+            display:none;
+        }
+        
     }
 
     /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -19,10 +27,22 @@
         body{
             background-color: green;
         }
+        div#small,div#large{
+            display:none;
+        }
+        div#medium{
+            display:block;
+        }
     }
     @media only screen and (min-width:768px) {
         body{
             background-color: blue;
+        }
+        div#small, div#medium{
+            display:none;
+        }
+        div#large{
+            display:block;
         }
     }
 
@@ -31,6 +51,8 @@
     </style>
 </head>
 <body>
-    
+    <div id="small">small</div>
+    <div id="medium">medium</div>
+    <div id="large">large</div>
 </body>
 </html>
