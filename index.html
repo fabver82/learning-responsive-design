@@ -7,17 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
+        div{
+            display:block;
+            margin: 0;
+            padding:0;
+        }
          /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 410px) {
         body{
             background-color: red;
         }
-        div#small{
+        /* div#small{
             display:block;
         }
         div#medium,div#large{
             display:none;
+        } */
+        .col-s{
+            width:100%;
         }
         h1{
             font-size: 18px;
@@ -33,35 +40,39 @@
         body{
             background-color: green;
         }
-        div#small,div#large{
+        /* div#small,div#large{
             display:none;
         }
         div#medium{
             display:block;
-        }
+        } */
         h1{
             font-size: 20px;
         }
         p{
             font-size: 16px;
         }
+        .col-m-1{width:66%}
+        .col-m-2{width:33%}
+        .col-m-3{width:100%}
     }
     @media only screen and (min-width:768px) {
         body{
             background-color: blue;
         }
-        div#small, div#medium{
+        /* div#small, div#medium{
             display:none;
         }
         div#large{
             display:block;
-        }
+        } */
         h1{
             font-size: 22px;
         }
         p{
             font-size: 16px;
         }
+        .col-b{width:33%}
     }
 
 
@@ -69,15 +80,15 @@
     </style>
 </head>
 <body>
-    <div id="small">
+    <div id="small" class="col-s col-m-1 col-b">
         <h1>content for smartphones</h1>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam ex in sapiente eligendi nostrum commodi, eos, magnam iure rem voluptatem, assumenda error! Inventore quas nulla molestias! Minima eos enim blanditiis.</p>
     </div>
-    <div id="medium">
+    <div id="medium" class="col-s col-m-2 col-b">
         <h1>content for table</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus magnam sit nihil ducimus, unde quibusdam deserunt quisquam, esse non dolorem est dignissimos? Eos modi quam velit officiis sunt quo dolorem?</p>
     </div>
-    <div id="large">
+    <div id="large" class="col-s col-m-3 col-b">
         <h1>content for laptop</h1>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam aut excepturi ex corporis, praesentium, ratione ab nulla cumque maiores non animi! Explicabo, dolorem cupiditate veritatis unde quam tempore illum assumenda.</p>
     </div>
